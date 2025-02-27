@@ -1,0 +1,170 @@
+[
+    {
+        "model": "goods.products",
+        "pk": 1,
+        "fields": {
+            "name": "Nike Pink AirMaxPlus TN",
+            "slug": "nike-pink-airmaxplus-tn",
+            "description": "Разработаны с использованием технологии Tuned Air, которая обеспечивает лучшую амортизацию и поддержку стопы.",
+            "image": "",
+            "price": "150.00",
+            "discount": "0.00",
+            "quantity": 4,
+            "category": 3
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 2,
+        "fields": {
+            "name": "Nike Air Force 1 '07",
+            "slug": "nike-air-force-1-07",
+            "description": "Всегда актуальная классика Nike Air Force 1 '07.",
+            "image": "",
+            "price": "200.00",
+            "discount": "0.00",
+            "quantity": 6,
+            "category": 3
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 3,
+        "fields": {
+            "name": "Adidas Gazelle Indoor",
+            "slug": "adidas-gazelle-indoor",
+            "description": "Любят фанаты около футбольной эстетики.",
+            "image": "",
+            "price": "249.00",
+            "discount": "0.00",
+            "quantity": 11,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 4,
+        "fields": {
+            "name": "Adidas Ozelia",
+            "slug": "adidas-ozelia",
+            "description": "Ты далек от 90-х, но Ozelia пришли именно из той эпохи ярких экспериментов.",
+            "image": "",
+            "price": "169.00",
+            "discount": "0.00",
+            "quantity": 7,
+            "category": 4
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 5,
+        "fields": {
+            "name": "New Balance 2002",
+            "slug": "new-balance-2002",
+            "description": "Силуэт вдохновлен беговыми кроссовками 2000-х годов.",
+            "image": "",
+            "price": "160.00",
+            "discount": "0.00",
+            "quantity": 5,
+            "category": 5
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 6,
+        "fields": {
+            "name": "New Balance 530",
+            "slug": "new-balance-530",
+            "description": "Яркий представитель «daddy shoes».",
+            "image": "",
+            "price": "199.00",
+            "discount": "0.00",
+            "quantity": 10,
+            "category": 5
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 7,
+        "fields": {
+            "name": "Vans Sk8-Low",
+            "slug": "vans-sk8-low",
+            "description": "Узнаваемые полоски по бокам и логотип на язычке не оставляют равнодушными.",
+            "image": "",
+            "price": "123.00",
+            "discount": "0.00",
+            "quantity": 20,
+            "category": 6
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 8,
+        "fields": {
+            "name": "Vans Old Skool Checkerboard",
+            "slug": "vans-old-skool-checkerboard",
+            "description": "Vans Old Skool покорила стритстайл в 1977 году и на сегодняшний день является частью уличной моды.",
+            "image": "",
+            "price": "202.00",
+            "discount": "0.00",
+            "quantity": 9,
+            "category": 6
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 9,
+        "fields": {
+            "name": "PUMA Palermo Leather",
+            "slug": "puma-palermo-leather",
+            "description": "Дебютировали в 80-х годах, став частью дресс-кода британских болельщиков.",
+            "image": "",
+            "price": "99.00",
+            "discount": "0.00",
+            "quantity": 22,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 10,
+        "fields": {
+            "name": "PUMA Suede XL",
+            "slug": "puma-suede-xl",
+            "description": "Классическая модель 1968 года возвращается в стильном «дутом» исполнении.",
+            "image": "",
+            "price": "140.00",
+            "discount": "0.00",
+            "quantity": 6,
+            "category": 7
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 11,
+        "fields": {
+            "name": "Converse Chuck 70",
+            "slug": "converse-chuck-70",
+            "description": "Кеды All Star 70 прославляет наследие Converse",
+            "image": "",
+            "price": "121.00",
+            "discount": "0.00",
+            "quantity": 3,
+            "category": 8
+        }
+    },
+    {
+        "model": "goods.products",
+        "pk": 12,
+        "fields": {
+            "name": "Converse Chuck Taylor As Core",
+            "slug": "converse-chuck-taylor-as-core",
+            "description": "Классический силуэт, который не меняется годами.",
+            "image": "",
+            "price": "95.00",
+            "discount": "0.00",
+            "quantity": 13,
+            "category": 8
+        }
+    }
+]

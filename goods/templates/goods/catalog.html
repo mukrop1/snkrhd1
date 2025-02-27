@@ -40,282 +40,44 @@
             <button type="submit" class="btn btn-primary mx-3 mt-3">Применить</button>
         </form>
     </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/pinkairmaxplus.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="../goods/product.html">
-                    <p class="card-title">Nike Pink AirMaxPlus TN</p>
-                </a>
-                <p class="card-text text-truncate">Разработаны с использованием технологии Tuned Air, которая обеспечивает лучшую амортизацию и поддержку стопы.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn add-to-cart">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
+
+    {% for product in goods %}
+        <!-- Карта товара -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                {% if product.image %}
+                    <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
+                {% else %}
+                    <img src="{% static "deps\images\Not found image.png" %}" class="card-img-top" alt="...">
+                {% endif %}
+
+                <div class="card-body">
+                    <a href="../goods/product.html">
+                        <p class="card-title">{{ product.name }}</p>
                     </a>
+                    <p class="card-text text-truncate">{{ product.description }}</p>
+                    <p class="product_id">id: {{ product.display_id }}</p>
+                    <div class="d-flex justify-content-between">
+                        {% if product.discount %}
+                            <p><s>{{product.price }}</s> $</p>
+                            <p><strong>{{product.sell_price}} $</strong></p>
+                            <span class="badge bg-warning text-dark">Скидка {{product.discount}} %</span>
+                        {% else %}
+                            <p><strong>{{ product.price }} $</strong></p>
+                        {% endif %}
+
+                        <a href="#" class="btn add-to-cart">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/airforce107jpg.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">Nike Air Force 1 '07</p>
-                </a>
-                <p class="card-text text-truncate">Всегда актуальная классика Nike Air Force 1 '07.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn add-to-cart">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/gazelleindoorjpg.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">Adidas Gazelle Indoor</p>
-                </a>
-                <p class="card-text text-truncate">Любят фанаты около футбольной эстетики.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/ozelia.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">Adidas Ozelia</p>
-                </a>
-                <p class="card-text text-truncate">Ты далек от 90-х, но Ozelia пришли именно из той эпохи ярких экспериментов.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/nb2002.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">New Balance 2002</p>
-                </a>
-                <p class="card-text text-truncate">Силуэт вдохновлен беговыми кроссовками 2000-х годов.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/nb530.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">New Balance 530</p>
-                </a>
-                <p class="card-text text-truncate">Яркий представитель «daddy shoes».</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/vanssk8low.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">Vans Sk8-Low</p>
-                </a>
-                <p class="card-text text-truncate">Узнаваемые полоски по бокам и логотип на язычке не оставляют равнодушными.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/oldskool.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">Vans Old Skool Checkerboard</p>
-                </a>
-                <p class="card-text text-truncate">Vans Old Skool покорила стритстайл в 1977 году и на сегодняшний день является частью уличной моды.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/palermo.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">PUMA Palermo Leather</p>
-                </a>
-                <p class="card-text text-truncate">Дебютировали в 80-х годах, став частью дресс-кода британских болельщиков.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/suede.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">PUMA Suede XL</p>
-                </a>
-                <p class="card-text text-truncate">Классическая модель 1968 года возвращается в стильном «дутом» исполнении.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/chuck70.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">Converse Chuck 70</p>
-                </a>
-                <p class="card-text text-truncate">Кеды All Star 70 прославляет наследие Converse</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Карта товара -->
-    <div class="col-lg-4 col-md-6 p-4">
-        <div class="card border-primary rounded custom-shadow">
-            <img src="../deps/images/goods/chucktaylor.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#">
-                    <p class="card-title">Converse Chuck Taylor As Core</p>
-                </a>
-                <p class="card-text text-truncate">Классический силуэт, который не меняется годами.</p>
-                <p class="product_id">id: 02265</p>
-                <div class="d-flex justify-content-between">
-                    <p><s>100</s> $</p>
-                    <p><strong>90.00 $</strong></p>
-                    <span class="badge bg-warning text-dark">Скидка 10.00 %</span>
-                    <!-- <p><strong>100.00 $</strong></p> -->
-                    <a href="#" class="btn">
-                        <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                            width="32" height="32">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
+
+    
+
 
 </div>
 <!-- Пагинация -->
