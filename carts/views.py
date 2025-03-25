@@ -10,7 +10,6 @@ from goods.models import Products
 def cart_add(request):
 
     product_id = request.POST.get("product_id")
-    print(f"Пытаемся получить продукт с ID: {product_id}")
 
     product = Products.objects.get(id=product_id)
 
@@ -39,8 +38,27 @@ def cart_add(request):
     return JsonResponse(response_data)
 
 
-def cart_change(request, product_slug): ...
+def cart_change(request):
+    cart_id = request.POST.get("cart_id")
+    quantity = request.POST.get("quantity")
 
+    cart = Cart.objects.get(id=cart_id)
+
+    cart.quantity = quantity
+    cart.save()
+    updated_quantity = cart.quantity
+
+    cart = get_user_carts(request)
+    cart_items_html = render_to_string(
+        "carts/includes/included_cart.html", {"carts": cart}, request=request)
+
+    response_data = {
+        "message": "Количество изменено",
+        "cart_items_html": cart_items_html,
+        "quantity": updated_quantity,
+    }
+
+    return JsonResponse(response_data)
 
 def cart_remove(request):
 
